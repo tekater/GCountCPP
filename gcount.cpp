@@ -37,7 +37,7 @@ int main()
         {
             if (i == j) {
                 cout << "   ";
-                
+
             }
             else {
                 cout << " @";
@@ -47,68 +47,60 @@ int main()
         cout << endl;
     }
     //third
-        for (int i = 0; i <= length; i++)
+    for (int i = 0; i <= length; i++)
+    {
+        for (int j = 0; j <= length; j++)
         {
-            for (int j = 0; j <= length; j++)
-            {
-                if (i >= j && i + j >= length || i <= j && i + j <= length) {
-                    cout << "*";
-                    three++;
-                }
-                else {
-                    cout << " ";
-                }
+            if (i >= j && i + j >= length || i <= j && i + j <= length) {
+                cout << "*";
+                three++;
             }
-            cout << endl;
+            else {
+                cout << " ";
+            }
         }
-     //4
-        /*for (int i = 0; i <= length; i++)
+        cout << endl;
+    }
+    //4
+    for (int i = 0; i <= length; i++)
+    {
+        for (int j = 0; j <= length; j++)
         {
-            for (int j = 0; j <= length; j++)
-            {
-                if (i > j) {
-                    cout << "*";
-                    four++;
-                }
-                else {
-                    cout << " ";
-                }
+            if (i >= j && i + j >= length || i <= j && i + j <= length) {
+                cout << " ";
+                four++;
             }
-            cout << endl;
-        }
-        for (int i = 0; i <= length; i++)
-        {
-            for (int j = 0; j <= length; j++)
-            {
-                if (i < j) {
-                    cout << " ";
-                }
-                else {
-                    cout << "*";
-                    four++;
-                }
+            else {
+                cout << "*";
             }
-            cout << endl;
-        }*/
-        if (max < one) {
-            max = one;
         }
-        if (max < two) {
-            max = two;
-        }
-        if (max < three) {
-            max = three;
-        }
-        
-        if (min > one) {
-            min = one;
-        }
-        if (min > two) {
-            min = two;
-        }
-        if (min > three) {
-            min = three;
-        }
-        int sum = one + two + three;
-    cout << "one: " << one << "\ntwo: " << two << "\nthree: " << three << "\n\nmax: " << max << "\nmin: " << min << "\nsum: " << sum;
+        cout << endl;
+    }
+    if (max < one) {
+        max = one;
+    }
+    if (max < two) {
+        max = two;
+    }
+    if (max < three) {
+        max = three;
+    }
+    if (max < four) {
+        max = four;
+    }
+
+    if (min > one) {
+        min = one;
+    }
+    if (min > two) {
+        min = two;
+    }
+    if (min > three) {
+        min = three;
+    }
+    if (min > four) {
+        min = four;
+    }
+    int sum = one + two + three + four;
+    cout << "one: " << one << "\ntwo: " << two << "\nthree: " << three << "\nfour: " << four << "\n\nmax: " << max << "\nmin: " << min << "\nsum: " << sum;
 }
